@@ -15,7 +15,6 @@ namespace AsciiSnake
         private List<SnakeSegment> body = new List<SnakeSegment>();
         private Direction direction = Direction.Right;
         private GameLevel Gl;
-        private Vector2 position;
         public Snake(GameLevel gl)
         {
             var hook = new SimpleReactiveGlobalHook();
