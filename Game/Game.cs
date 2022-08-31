@@ -13,7 +13,7 @@ namespace AsciiSnake
         }
         private Vector2 size;
         private GameLevel level;
-        public int score = 0;
+        public bool running = false;
         public Game(Game.Difficulty? difficulty)
         {
             if(difficulty == Difficulty.Easy)
@@ -29,7 +29,7 @@ namespace AsciiSnake
             {
                 size = new Vector2(5,5);
             }
-            level = new GameLevel(size);
+            level = new GameLevel(size, this);
 
         }
 
