@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nCn4PzaVnPJbtET2lD2uO4Icz8PH0sqcH4/EiqX0Oh1kMjUMCg3i6Ymr+GRrwebxvJ+fRWfmmuuvg/zwUraO4Q==",
+  "dgSpecHash": "RWaJob36Muxf+K5FPLe09MMdDLCVytN3wqOKvs/YD9NxbFqXLtXDhFU+Ib7r7FV4zEozjcDuuX6cmsaWOP9G6g==",
   "success": true,
   "projectFilePath": "/home/austind/Code/C#/Games/AsciiSnake/AsciiSnake.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/austind/.nuget/packages/sharphook/3.1.1/sharphook.3.1.1.nupkg.sha512",
+    "/home/austind/.nuget/packages/sharphook.reactive/3.1.1/sharphook.reactive.3.1.1.nupkg.sha512",
+    "/home/austind/.nuget/packages/system.reactive/5.0.0/system.reactive.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
