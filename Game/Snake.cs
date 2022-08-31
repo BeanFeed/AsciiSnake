@@ -62,7 +62,22 @@ namespace AsciiSnake
         {
             if(direction == Direction.Up)
             {
-
+                position.Y--;
+            }else if(direction == Direction.Down)
+            {
+                position.Y++;
+            }else if(direction == Direction.Left)
+            {
+                position.X--;
+            }else if(direction == Direction.Right)
+            {
+                position.X++;
+            }
+            List<SnakeSegment> temp = body;
+            body[0].position = position;
+            for(int i = 1; i < temp.Count; i++)
+            {
+                body[i].position = temp[i - 1].position;
             }
         }
 
