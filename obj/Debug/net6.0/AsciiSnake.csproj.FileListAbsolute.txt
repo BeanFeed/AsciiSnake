@@ -1,0 +1,15 @@
+/home/austind/Code/C#/Games/AsciiSnake/bin/Debug/net6.0/AsciiSnake
+/home/austind/Code/C#/Games/AsciiSnake/bin/Debug/net6.0/AsciiSnake.deps.json
+/home/austind/Code/C#/Games/AsciiSnake/bin/Debug/net6.0/AsciiSnake.runtimeconfig.json
+/home/austind/Code/C#/Games/AsciiSnake/bin/Debug/net6.0/AsciiSnake.dll
+/home/austind/Code/C#/Games/AsciiSnake/bin/Debug/net6.0/AsciiSnake.pdb
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/AsciiSnake.csproj.AssemblyReference.cache
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/AsciiSnake.GeneratedMSBuildEditorConfig.editorconfig
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/AsciiSnake.AssemblyInfoInputs.cache
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/AsciiSnake.AssemblyInfo.cs
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/AsciiSnake.csproj.CoreCompileInputs.cache
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/AsciiSnake.dll
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/refint/AsciiSnake.dll
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/AsciiSnake.pdb
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/AsciiSnake.genruntimeconfig.cache
+/home/austind/Code/C#/Games/AsciiSnake/obj/Debug/net6.0/ref/AsciiSnake.dll
