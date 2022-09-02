@@ -33,10 +33,10 @@ namespace AsciiSnake
             */
             Gl = gl;
             SnakeSegment head = new SnakeSegment(new Vector2(3, yPos));
-            position = new Vector2(5,yPos);
+            position = new Vector2(3,yPos);
             head.renderAscii = "$ ";
             body.Add(head);
-            for(int i = 4; i > 0; i--)
+            for(int i = 2; i > 0; i--)
             {
                 body.Add(new SnakeSegment(new Vector2(i, yPos)));
             }
@@ -105,45 +105,80 @@ namespace AsciiSnake
                     {
                         sm.Render();
                     }
-                    Console.SetCursorPosition(body[0].position.X * 2, body[0].position.Y);
-                    ConsoleColor defCol = Console.ForegroundColor;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("X");
-                    Console.ForegroundColor = defCol;
-                    Gl.game.running = false;
-                    hook.Dispose();
+                    Kill();
                     return true;
                 }
             }
             return false;
         }
+        private void Kill()
+        {
+            Console.SetCursorPosition(body[0].position.X * 2, body[0].position.Y);
+            ConsoleColor defCol = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("X");
+            Console.ForegroundColor = defCol;
+            Gl.game.running = false;
+            hook.Dispose();
+        }
         private void HandleCollisions()
         {
-            List<GameObject> objects = new List<GameObject>(Gl.objects);
-            foreach(GameObject obj in objects)
+            List<Apple> objects = new List<Apple>();
+            foreach(GameObject obj in Gl.objects)
             {
-                if(obj == this)
+                if(obj is Apple ap)
                 {
-                    objects.Remove(obj);
+                    objects.Add(ap);
                 }
             }
+            
             foreach(GameObject obj in objects)
             {
                 if(obj is Apple ap && ap.position.X == position.X && ap.position.Y == position.Y)
                 {
-                    Gl.game.score
+                    Gl.score++;
+                    body.Add(new SnakeSegment(new Vector2(body[body.Count - 1].position.X, body[body.Count - 1].position.Y)));
+                    bool readToMake = false;
+                    int x = 0;
+                    int y = 0;
+                    while(!readToMake){
+                        readToMake = true;
+                        Random rand = new Random();
+                        x = rand.Next(1, Gl.size.X - 2);
+                        y = rand.Next(1, Gl.size.Y - 2);
+
+                        foreach(SnakeSegment sm in body)
+                        {
+                            if(sm.position.X == x && sm.position.Y == y)
+                            {
+                                readToMake = false;
+                                break;
+                            }
+                        }
+                        
+                    }
+                    ap.position = new Vector2(x,y);
                 }
+            }
+
+            if(position.X >= Gl.size.X - 1 || position.X < 1)
+            {
+                Kill();
+            }else if(position.Y >= Gl.size.Y - 1 || position.Y < 1)
+            {
+                Kill();
             }
         }
         public override void Render()
         {
             Move();
-            if(CheckSelfCollide()) return;
-            HandleCollisions();
             foreach(SnakeSegment sm in body)
             {
                 sm.Render();
             }
+            
+            if(CheckSelfCollide()) return;
+            HandleCollisions();
         }
     }
 }

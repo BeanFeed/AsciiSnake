@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "RWaJob36Muxf+K5FPLe09MMdDLCVytN3wqOKvs/YD9NxbFqXLtXDhFU+Ib7r7FV4zEozjcDuuX6cmsaWOP9G6g==",
+  "dgSpecHash": "XGGOZtAfmQK/bJaOoJYInmbxnK2pLoT+9PEAiLB8nAuRGwwm/HhLgBWFSqsdHAs/L6wx5kNFenKePi1lCyXqkQ==",
   "success": true,
   "projectFilePath": "/home/austind/Code/C#/Games/AsciiSnake/AsciiSnake.csproj",
   "expectedPackageFiles": [
     "/home/austind/.nuget/packages/sharphook/3.1.1/sharphook.3.1.1.nupkg.sha512",
     "/home/austind/.nuget/packages/sharphook.reactive/3.1.1/sharphook.reactive.3.1.1.nupkg.sha512",
-    "/home/austind/.nuget/packages/system.reactive/5.0.0/system.reactive.5.0.0.nupkg.sha512"
+    "/home/austind/.nuget/packages/system.reactive/5.0.0/system.reactive.5.0.0.nupkg.sha512",
+    "/home/austind/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/6.0.8/microsoft.netcore.app.runtime.linux-x64.6.0.8.nupkg.sha512",
+    "/home/austind/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/6.0.8/microsoft.aspnetcore.app.runtime.linux-x64.6.0.8.nupkg.sha512",
+    "/home/austind/.nuget/packages/microsoft.netcore.app.crossgen2.linux-x64/6.0.8/microsoft.netcore.app.crossgen2.linux-x64.6.0.8.nupkg.sha512"
   ],
   "logs": []
 }

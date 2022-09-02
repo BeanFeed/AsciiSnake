@@ -15,11 +15,21 @@ namespace AsciiSnake
             size = Size;
             snake = new Snake(this);
             objects.Add(snake);
+            objects.Add(new Apple(new Vector2(size.X - 2,size.Y / 2)));
         }
-        private void AddObject(GameObject obj)
+        public void RemoveObject(GameObject obj)
         {
-            objects.Add(obj);
+            foreach(GameObject obje in objects)
+            {
+                if(obj == obje)
+                {
+                    List<GameObject> newList = new List<GameObject>(objects);
+                    newList.Remove(obj);
+                    objects = new List<GameObject>(newList);
+                }
+            }
         }
+
         public void Render()
         {
             Console.CursorVisible = false;
@@ -49,6 +59,8 @@ namespace AsciiSnake
             }
             Console.SetCursorPosition((size.X * 2) - 2, size.Y - 1);
             Console.Write("+ ");
+            Console.SetCursorPosition(0, size.Y);
+            Console.Write("Score: " + score.ToString());
             foreach(GameObject obj in objects)
             {
                 obj.Render();
